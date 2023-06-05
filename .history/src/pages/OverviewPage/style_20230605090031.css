@@ -1,0 +1,10 @@
+.overView-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content-right{
+    display: flex;
+    flex-direction: column;
+}
