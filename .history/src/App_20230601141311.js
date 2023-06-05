@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./pages/login";
 import { connect } from "react-redux";
 import Layout from "./component/Layout";
+import ContentBox from "./component/ContentBox";
 import SystemPage from "./pages/SystemPage";
 
 // import { connect } from "react-redux";

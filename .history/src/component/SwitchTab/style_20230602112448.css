@@ -1,0 +1,15 @@
+.tab-container{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.tab-box{
+    display: flex;
+    flex-direction: row;
+    /* width: 700px; */
+background: linear-gradient(270deg, rgba(40, 155, 181, 0) 0%, #236271 51.04%, rgba(40, 155, 181, 0) 100%);
+
+gap: 8px;
+
+  }

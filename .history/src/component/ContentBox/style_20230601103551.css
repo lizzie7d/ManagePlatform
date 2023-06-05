@@ -1,0 +1,16 @@
+.box-container{
+    width: 360px;
+    background: linear-gradient(180deg, #0B323A 0%, rgba(11, 52, 69, 0.4) 100%);
+/* box-shadow: 0px 0px 16px rgba(14, 39, 47, 0.6); */
+backdrop-filter: blur(px);
+border-radius: 4px;
+border-image:  linear-gradient(187.18deg, #54EEDE -0.12%, rgba(255, 255, 255, 0) 6.69%),
+linear-gradient(174.32deg, #257985 0%, rgba(37, 121, 133, 0) 62.02%, #013B43 100%);
+}
+
+.box-title{
+    height: 40px;
+    padding: 8px 16px;
+    border: 1px solid;
+
+}

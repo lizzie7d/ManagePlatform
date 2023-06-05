@@ -1,0 +1,40 @@
+.layout-bg{
+    background-image: url('../../assets/layout/banner.png');
+ height: 6vh;
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+display: flex;
+align-items: center;
+
+}
+
+.layout-flex{
+    padding: 0px 24px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.layout-title{
+    font-size: 30px;
+    color: #fff;
+}
+
+.layout-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left-title{
+    display: flex;
+    flex-direction: row;
+    gap:10px
+}
+
+.layout-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

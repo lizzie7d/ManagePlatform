@@ -1,0 +1,31 @@
+.box-container{
+    width: 360px;
+    background: linear-gradient(180deg, #0B323A 0%, rgba(11, 52, 69, 0.4) 100%);
+/* box-shadow: 0px 0px 16px rgba(14, 39, 47, 0.6); */
+backdrop-filter: blur(px);
+border-radius: 4px;
+border:1px solid;
+position: inherit;
+left:20px;
+}
+
+.box-title{
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+    height: 30px;
+    padding: 8px 16px;
+    border:1px solid;
+    /* background-image: url('../../assets/title-bg.png'); */
+    line-height: 30px;
+    display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.box-content{
+    padding: 16px;
+    color: #FFFFFF;
+    text-align: justify;
+    line-height: 26px;
+}

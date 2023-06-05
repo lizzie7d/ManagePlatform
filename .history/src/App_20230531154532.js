@@ -6,8 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Login from "./pages/login";
 import { connect } from "react-redux";
-import Layout from "./component/Layout";
-import SystemPage from "./pages/SystemPage";
+import Layout from "../.history/src/component/layout";
 
 // import { connect } from "react-redux";
 
@@ -17,9 +16,8 @@ const App = () => {
       <ConfigProvider>
         <Layout />
         <Routes>
-          {/* <Route exact path="/" element={<Login />} /> */}
-          {/* <Route exact path="/login" element={<Login />} /> */}
-          <Route path="moniringSystem" element={<SystemPage />} />
+          <Route exact path="/" element={<Login />} />
+          <Route exact path="/login" element={<Login />} />
 
           {/* <Route path="/console/home/*" element={<Home/>} />*/}
         </Routes>

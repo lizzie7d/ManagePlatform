@@ -1,0 +1,28 @@
+.layout-bg{
+    background-image: url('../../assets/layout/banner.png');
+ height: 10vh;
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+
+}
+
+.layout-flex{
+    padding: 0px 24px;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.layout-title{
+    font-size: 30px;
+    color: #fff;
+}
+
+.layout-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
