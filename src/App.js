@@ -11,6 +11,7 @@ import SystemPage from "./pages/SystemPage";
 import Overview from "./pages/OverviewPage";
 import PlantInfo from "./pages/PlantInfo/plantInfo";
 import FaultPage from "./pages/FaultPage";
+import Yunwei from "./pages/yunwei";
 
 // import { connect } from "react-redux";
 
@@ -26,6 +27,9 @@ const App = () => {
           <Route path="overview" element={<Overview />} />
           <Route path="plantInfo" element={<PlantInfo />} />
           <Route path="faultPage" element={<FaultPage />} />
+          <Route path="yunwei" element={<Yunwei />} />
+
+
           {/* <Route path="/console/home/*" element={<Home/>} />*/}
         </Routes>
         {/* {userInfo?<CustomLayout />:<Login />}*/}

@@ -2,35 +2,54 @@ import ContentBox from '../../component/ContentBox';
 import SwitchTab from '../../component/SwitchTab';
 import './style.css';
 import systemPic from '../../assets/systempic.png';
+import MiddleBox from '../../component/MiddleBox';
+import { Content } from 'antd/es/layout/layout';
 const SystemPage = () => {
 
     //监测系统页面
 
     return (
         <div className=''>
-            <SwitchTab title={['花田乡', '南腰界镇', '涂市镇', '李溪镇', '铜鼓镇',]} />
+            <div className="content-middle">
+                <MiddleBox />
+            </div>
             <div className="system-container">
                 <div className="content-left">
                     <ContentBox
-                        title='设备总览'
-                        infoFirstTab={[{ title: '设备数量', count: 120 }, { title: '运行状态', count: '正常' }]}
-                        infoSecondTab={[{ title: '设备类型', count: 120 }]}
-                        selectFirst={[{ title: '设备状态', options: ['开启', '关闭'] }, { title: '控制类型', options: ['自动', '手动'] }]}
-                        selectSecond={[{ title: '运行状态', options: ['开启', '关闭'] }, { title: '所在区域', options: ['天花村', '手动'] }]}
-                        tableListName={['设备编号', '运行状态', '设备开关', '位置']}
-                        tableList={['E001', '正常', '开启']}
+                        title={'现场环境信息'}
+                        verticalInfo={[{ title: '温度', count: '30°C' }, { title: '湿度', count: '56%' }, {
+                            title: 'PM2.5', count: '80'
+                        }, { title: 'PM10', count: '120' }]}
+                        infoFirstTab={[{ title: '空气质量', count: "优" }, { title: '空气质量', count: '50DB' }]}
+                        infoSecondTab={[{ title: '风向', count: '东南' }, { title: '空气质量', count: '1.5m/s' }]}
+                        infoThirdTab={[{ title: '紫外线', count: '1级' }, { title: '空气质量', count: '56%' }]}
+                    />
+                    <ContentBox title={'维护人员信息'}
+                        verticalInfo={[{ title: '温度', count: '30°C' }, { title: '湿度', count: '56%' }, {
+                            title: 'PM2.5', count: '80'
+                        }, { title: 'PM10', count: '120' }]}
+                    />
+                    <ContentBox
+                        // pic={overViewPic1}
+                        lineChart={true}
+                        title={"苗木库 "}
+
                     />
                 </div>
                 <div className="content-right">
                     <ContentBox
-                        title='功能监测系统'
-                        infoFirstTab={[{ title: '', count: '摄像监测' }, { title: '', count: '苗情监测' }]}
-                        infoSecondTab={[{ title: '', count: '土壤监测' }, { title: '', count: '水质监测' }]}
-                        infoThirdTab={[{ title: '', count: '虫害监测' }]}
+                        title='苗木维护时间'
+                        infoFirstTab={[{ title: '', count: '区域A' }, { title: '', count: '区域B' }, { title: '', count: '区域C' }]}
+                    // infoSecondTab={[{ title: '', count: '区域C' }]}
                     />
                     <ContentBox
                         title='实景监测框及导航'
                         pic={systemPic}
+                    />
+                    <ContentBox
+                        title='苗木维护完成度'
+
+                        finished={true}
                     />
                 </div>
             </div>

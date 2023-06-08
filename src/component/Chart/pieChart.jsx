@@ -5,13 +5,10 @@ const DemoPie = ({ data }) => {
     function renderStatistic(containerWidth, text, style) {
         const { width: textWidth, height: textHeight } = measureTextWidth(text, style);
         const R = containerWidth / 2; // r^2 = (w / 2)^2 + (h - offsetY)^2
-
         let scale = 1;
-
         if (containerWidth < textWidth) {
             scale = Math.min(Math.sqrt(Math.abs(Math.pow(R, 2) / (Math.pow(textWidth / 2, 2) + Math.pow(textHeight, 2)))), 1);
         }
-
         const textStyleStr = `width:${containerWidth}px;`;
         return `<div style="${textStyleStr};font-size:${scale}em;line-height:${scale < 1 ? 1 : 'inherit'};">${text}</div>`;
     }
@@ -77,7 +74,7 @@ const DemoPie = ({ data }) => {
             },
         ],
     };
-    return <Pie {...config} />;
+    return <Pie {...config} height={250} />;
 };
 
 export default DemoPie

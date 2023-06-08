@@ -1,39 +1,61 @@
-.layout-bg{
+.layout-bg {
     background-image: url('../../assets/banner.png');
- height: 6vh;
- background-repeat: no-repeat;
- background-size: 100% 100%;
+    height: 6vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 
 }
 
-.layout-flex{
+.layout-flex {
     padding: 0px 24px;
     display: flex;
-align-items: center;
+    align-items: center;
 
     flex-direction: row;
     text-align: center;
     justify-content: space-between;
 }
 
-.layout-title{
+.layout-title {
     font-size: 30px;
     color: #fff;
 }
 
-.layout-left{
+.layout-left {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.left-title{
+.left-title {
     display: flex;
     flex-direction: row;
-    gap:10px
+    gap: 10px
 }
 
-.layout-right{
+.left-title a {
+    color: #ffff;
+    text-decoration: none;
+    padding: 2px 8px;
+    background-image: url('../../assets/tab-select.png');
+
+}
+
+
+
+.middle-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 200px;
+    font-weight: 400;
+    font-size: 16px;
+    opacity: 0.7;
+    color: #fff;
+}
+
+.layout-right {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

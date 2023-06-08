@@ -1,9 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
 import './style.css';
 import titleImg from '../../assets/title-pic.png';
-import Select from 'react-select';
-import DemoLine from '../Chart/lineChart';
+
 import DemoPie from '../Chart/pieChart';
+import DemoColumn from '../Chart/columnChart';
+import DemoGauge from '../Chart/finishedChart';
 // title: 名称
 // content: 是否有解释内容
 // arrFirstRow: 数组 每三个一组 => 属性有title/num/symbol(非必有)
@@ -23,7 +24,8 @@ const ContentBox = ({
     pic,
     lineChart,
     picText,
-    pieChart
+    pieChart,
+    finished
 }) => {
     return (
         <div
@@ -32,14 +34,20 @@ const ContentBox = ({
                 <img src={titleImg} />
                 {title}
             </div>
-            {verticalInfo && (<div className='vertical-info'>
-                {verticalInfo.map((item, index) => (
-                    <div className="eachInfo" key={index}>
-                        <div>{item.count}</div>
-                        <div>{item.title}</div>
+            {verticalInfo && (
+                <div className='link-basic'>
+                    <div className='vertical-info'>
+                        {verticalInfo.map((item, index) => (
+                            <div className="eachInfo" key={index}>
+                                <div>{item.count}</div>
+                                <div className='link-bottom'></div>
+                                <div>{item.title}</div>
+                            </div>))}
 
-                    </div>))}
-            </div>)}
+                    </div>
+
+                </div>
+            )}
             {content && (<div className="box-content">
                 {content}
             </div>)}
@@ -59,10 +67,17 @@ const ContentBox = ({
             </div>)}
             {lineChart &&
                 <div className="graphic-content">
-                    <DemoLine data={lineChart} />
+                    <DemoColumn />
 
                 </div>
             }
+            {finished &&
+                <div className="graphic-content">
+                    <DemoGauge />
+
+                </div>
+            }
+
             {pieChart &&
                 <div className="graphic-content">
                     <DemoPie data={pieChart} />
@@ -89,8 +104,9 @@ const ContentBox = ({
                         ))}
                     </div>
                 </div>)}
+
             {infoFirstTab && (
-                <div>
+                <div style={{ height: infoSecondTab ? 200 : 100 }}>
                     <div className='info-tab'>
                         {infoFirstTab.map((item, index) => (
                             <div key={index}
@@ -98,18 +114,22 @@ const ContentBox = ({
                                 <div className="info-title">
                                     {item.title}
                                 </div>
+                                <div className='link-right'></div>
+
                                 <div className="info-num">
                                     {item.count}
                                 </div>
                             </div>))}
                     </div>
                     <div className='info-tab'>
-                        {infoSecondTab.map((item, index) => (
+                        {infoSecondTab && infoSecondTab.map((item, index) => (
                             <div key={index}
                                 className='single-info'>
                                 <div className="info-title">
                                     {item.title}
                                 </div>
+                                <div className='link-right'></div>
+
                                 <div className="info-num">
                                     {item.count}
                                 </div>
@@ -123,6 +143,7 @@ const ContentBox = ({
                                 <div className="info-title">
                                     {item.title}
                                 </div>
+                                <div className='link-right'></div>
                                 <div className="info-num">
                                     {item.count}
                                 </div>
@@ -138,27 +159,24 @@ const ContentBox = ({
                         {selectFirst.map((item, index) => (
                             <div className="select-part" key={index}>
                                 <span className="select-title">{item.title}</span>
-                                <Select className='select-content'
+                                <select className='select-content'
                                     defaultValue={item.options[0]}
                                     // onChange={setSelectedOption}
                                     options={item.options}
                                 />
                             </div>
-
                         ))}
-
                     </div>
                     <div className='select-group'>
                         {selectSecond.map((item, index) => (
                             <div className="select-part" key={index}>
                                 <span className="select-title">{item.title}</span>
-                                <Select className='select-content'
+                                <select className='select-content'
                                     defaultValue={item.options[0]}
                                     // onChange={setSelectedOption}
                                     options={item.options}
                                 />
                             </div>
-
                         ))}
 
                     </div>

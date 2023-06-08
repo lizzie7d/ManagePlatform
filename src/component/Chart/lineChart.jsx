@@ -3,9 +3,6 @@ import { Line } from '@ant-design/plots';
 
 const DemoLine = ({ data }) => {
     //   const [data, setData] = useState([]);
-
-
-
     const config = {
         data,
         xField: 'year',
