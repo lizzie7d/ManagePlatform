@@ -1,7 +1,6 @@
 .middle-container {
     padding: 16px;
-
-    height: 114px;
+    height: 210px;
     background: linear-gradient(180deg, #0B323A 0%, rgba(11, 52, 69, 0.4) 100%);
     box-shadow: 0px 0px 16px rgba(14, 39, 47, 0.6);
     backdrop-filter: blur(8px);
@@ -20,8 +19,8 @@
     width: 100%;
     display: flex;
     position: absolute;
-    bottom: 5%;
     justify-content: center;
+    top: 702px;
 
 }
 
@@ -29,9 +28,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
-
-    gap: 8px
+    gap: 8px;
+    font-size: 14px;
 }
 
 .icon-and-text .single-detail {
@@ -40,12 +38,12 @@
     justify-content: center;
     align-items: center;
     gap: 8px;
-    background: linear-gradient(180deg, #257985 0%, #12434E 100%);
+    border: 1px solid rgba(37, 121, 133, 1);
     border-radius: 2px;
-    width: 80px;
+    width: 115px;
     height: 8px;
     color: #DCEAF8;
-    padding: 16px;
+    padding: 8px;
 }
 
 .link-right {

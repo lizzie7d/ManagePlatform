@@ -15,6 +15,8 @@ const ContentBoxRight = ({
     infoSecondTab,
     infoThirdTab,
     verticalInfo,
+    verticalSecondInfo,
+
     selectFirst,
     selectSecond,
     tableListName,
@@ -31,6 +33,14 @@ const ContentBoxRight = ({
             </div>
             {verticalInfo && (<div className='vertical-info'>
                 {verticalInfo.map((item, index) => (
+                    <div className="eachInfo" key={index}>
+                        <div>{item.count}</div>
+                        <div>{item.title}</div>
+
+                    </div>))}
+            </div>)}
+            {verticalSecondInfo && (<div className='vertical-info'>
+                {verticalSecondInfo.map((item, index) => (
                     <div className="eachInfo" key={index}>
                         <div>{item.count}</div>
                         <div>{item.title}</div>

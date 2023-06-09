@@ -2,30 +2,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  justify-content: center;
+  width: 100%;
+  top: 96px;
 }
 
 .tab-box {
   display: flex;
   flex-direction: row;
   /* width: 700px; */
-  background: linear-gradient(
-    270deg,
-    rgba(40, 155, 181, 0) 0%,
-    #236271 51.04%,
-    rgba(40, 155, 181, 0) 100%
-  );
-  padding: 10px 64px;
+  background: linear-gradient(270deg,
+      rgba(40, 155, 181, 0) 0%,
+      #236271 51.04%,
+      rgba(40, 155, 181, 0) 100%);
+  padding: 6px 64px;
   align-items: center;
-  gap: 36px;
+  gap: 12px;
 }
 
 .single-tab {
   height: 32px;
-  width: 100px;
+  width: 110px;
   text-align: center;
   line-height: 32px;
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
+  background-repeat: no-repeat;
 }
-
-

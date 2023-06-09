@@ -1,80 +1,72 @@
-import React, { useState, useEffect } from 'react';
-import { Pie, measureTextWidth } from '@ant-design/plots';
+import React, { Component } from 'react'
+import { Card } from 'antd'
+import 'echarts/lib/chart/pie'
+import 'echarts/lib/component/tooltip'
+import 'echarts/lib/component/title'
+import 'echarts/lib/component/legend'
+import 'echarts/lib/component/markPoint'
+import ReactEcharts from 'echarts-for-react'
 
-const DemoPie = ({ data }) => {
-    function renderStatistic(containerWidth, text, style) {
-        const { width: textWidth, height: textHeight } = measureTextWidth(text, style);
-        const R = containerWidth / 2; // r^2 = (w / 2)^2 + (h - offsetY)^2
-        let scale = 1;
-        if (containerWidth < textWidth) {
-            scale = Math.min(Math.sqrt(Math.abs(Math.pow(R, 2) / (Math.pow(textWidth / 2, 2) + Math.pow(textHeight, 2)))), 1);
-        }
-        const textStyleStr = `width:${containerWidth}px;`;
-        return `<div style="${textStyleStr};font-size:${scale}em;line-height:${scale < 1 ? 1 : 'inherit'};">${text}</div>`;
+const PieA = ({ data, lengendData }) => {
+    let option = {
+        title: {
+            x: 'center'
+        },
+        tooltip: {
+            trigger: 'item',
+            //提示框浮层内容格式器，支持字符串模板和回调函数形式。
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+
+        legend: {
+            orient: 'horizontal',
+            bottom: 0,
+            right: 0,
+            x: 'center',
+            data: lengendData,
+            itemHeight: 5,
+            itemWidth: 8,
+            textStyle: {
+                fontSize: '12px',
+                color: '#fff'
+            }
+        },
+
+        series: [
+            {
+                name: 'Access From',
+                type: 'pie',
+                radius: ['40%', '80%'],
+                avoidLabelOverlap: false,
+                itemStyle: {
+                    borderRadius: 10,
+                    borderColor: '#fff',
+                    borderWidth: 2
+                },
+                label: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                        fontSize: 25,
+                        fontWeight: 'bold'
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
+                data: data,
+            }
+        ]
     }
 
+    return (
+        <Card.Grid className="pie_a">
+            <ReactEcharts option={option} />
+        </Card.Grid>
+    )
 
-    const config = {
-        appendPadding: 10,
-        data,
-        angleField: 'value',
-        colorField: 'type',
-        radius: 1,
-        innerRadius: 0.64,
-        meta: {
-            value: {
-                formatter: (v) => `${v} ¥`,
-            },
-        },
-        label: {
-            type: 'inner',
-            offset: '-50%',
-            style: {
-                textAlign: 'center',
-            },
-            autoRotate: false,
-            content: '{value}',
-        },
-        statistic: {
-            title: {
-                offsetY: -4,
-                customHtml: (container, view, datum) => {
-                    const { width, height } = container.getBoundingClientRect();
-                    const d = Math.sqrt(Math.pow(width / 2, 2) + Math.pow(height / 2, 2));
-                    const text = datum ? datum.type : '总计';
-                    return renderStatistic(d, text, {
-                        fontSize: 28,
-                    });
-                },
-            },
-            content: {
-                offsetY: 4,
-                style: {
-                    fontSize: '32px',
-                },
-                customHtml: (container, view, datum, data) => {
-                    const { width } = container.getBoundingClientRect();
-                    const text = datum ? `¥ ${datum.value}` : `¥ ${data.reduce((r, d) => r + d.value, 0)}`;
-                    return renderStatistic(width, text, {
-                        fontSize: 32,
-                    });
-                },
-            },
-        },
-        // 添加 中心统计文本 交互
-        interactions: [
-            {
-                type: 'element-selected',
-            },
-            {
-                type: 'element-active',
-            },
-            {
-                type: 'pie-statistic-active',
-            },
-        ],
-    };
-    return <Pie {...config} height={250} />;
-};
-
-export default DemoPie
+}
+export default PieA;

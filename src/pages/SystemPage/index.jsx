@@ -1,7 +1,7 @@
 import ContentBox from '../../component/ContentBox';
 import SwitchTab from '../../component/SwitchTab';
 import './style.css';
-import systemPic from '../../assets/systempic.png';
+import systemPic from '../../assets/systempic.jpg';
 import MiddleBox from '../../component/MiddleBox';
 import { Content } from 'antd/es/layout/layout';
 const SystemPage = () => {

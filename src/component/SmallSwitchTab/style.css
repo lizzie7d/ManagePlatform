@@ -1,0 +1,24 @@
+.small-container {
+    display: flex;
+    flex-direction: row;
+    padding: 8px 0px 0px 0px;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    justify-content: center;
+}
+
+.left-smallTab {
+    width: 144px;
+    height: 32px;
+    line-height: 32px;
+    background-repeat: no-repeat;
+}
+
+.right-smallTab {
+    width: 144px;
+    height: 32px;
+    line-height: 32px;
+    background-repeat: no-repeat;
+}

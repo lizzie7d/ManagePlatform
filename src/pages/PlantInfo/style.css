@@ -1,6 +1,6 @@
-.plantinfo-contanier{
+.plantinfo-contanier {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 16px;
+    padding: 0px 32px;
 }

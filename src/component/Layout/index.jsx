@@ -30,10 +30,9 @@ const Layout = () => {
 
                             style={{
                                 fontWeight: 'bold',
-                                // backgroundImage: `url(${Tabselect})`
                             }}>过程维护信息</Link>
                     </div>
-                    <div className='layout-title'>绿化管理综合平台</div>
+                    <div className='layout-title'></div>
                     <div className="left-title">
                         <Link to={"faultPage"}
                             tabIndex={3}
@@ -44,14 +43,14 @@ const Layout = () => {
                                 // backgroundImage: `url(${Tabselect})`
                             }}>单植物原生信息</Link>
 
-                        <Link to={"yunwei"}
+                        <Link to={"plantInfo"}
                             tabIndex={4}
                             onClick={() => setTabIndex(4)}
 
                             style={{
                                 fontWeight: 'bold',
                                 // backgroundImage: `url(${Tabselect})`
-                            }}>运维管理</Link>
+                            }}>种植信息</Link>
                     </div>
 
                 </div>
