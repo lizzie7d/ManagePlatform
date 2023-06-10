@@ -6,13 +6,14 @@ import pic2 from '../../assets/pic2.jpg';
 import pic3 from '../../assets/pic3.jpg';
 import pic4 from '../../assets/pic4.jpg';
 import pic5 from '../../assets/pic5.jpg';
+import MiddleBox from '../../component/MiddleBox';
 
 
 const FaultPage = () => {
     return (
         <div>
             <div className="content-middle">
-                {/* <MiddleBox /> */}
+                <MiddleBox />
             </div>
             <div className='system-container'>
                 <div className="content-left">
@@ -56,13 +57,8 @@ const FaultPage = () => {
                         infoThirdTab={[{ title: '紫外线', count: '1级' }, { title: '空气湿度', count: '56%' }]}
                     />
                     <ContentBox title={'气象监测'}
-                        top={'80px'}
-                        right={'32px'}
-                        verticalInfo={[{ title: '温度', count: '30' }, { title: '温度', count: '56' }, {
-                            title: 'PM2.5', count: '80'
-                        }, {
-                            title: 'PM10', count: '120'
-                        }]}
+                        weather={1}
+
 
                     />
 

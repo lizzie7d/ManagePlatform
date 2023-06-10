@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
+const Login = ({ a }) => {
     const ng = useNavigate();
 
     return (
@@ -14,7 +14,7 @@ const Login = () => {
                         <div className="login-title">登录</div>
                         <input placeholder='请输入登录名' />
                         <input placeholder='请输入密码' />
-                        <div className='login-button' onClick={() => ng('faultPage')}>登录进入系统</div>
+                        <div className='login-button' onClick={() => { ng('/faultPage'); localStorage.setItem('login', true) }}>登录系统</div>
 
 
                     </div>

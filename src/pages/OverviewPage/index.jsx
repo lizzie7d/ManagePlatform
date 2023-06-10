@@ -5,14 +5,19 @@ import pic3 from '../../assets/companyManage/pic3.jpg';
 import pic4 from '../../assets/companyManage/pic4.jpg';
 
 import './style.css'
+import MultipleItems from "../../component/Carousel";
 // 稻场概况
 const Overview = () => {
 
     return (
         <div className="overView-container">
+
             <div className="content-left">
+                <ContentBox
 
-
+                    title={'合作单位'}
+                    picText={[{ title: '涂市镇', pic: pic1 }, { title: '铜鼓镇', pic: pic2 }, { title: '李溪镇', pic: pic3 }, { title: '花田乡', pic: pic4 }]}
+                />
 
             </div>
             <div className="content-right">

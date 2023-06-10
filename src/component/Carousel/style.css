@@ -1,0 +1,23 @@
+.img-content {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.img-list {
+    display: flex;
+    width: 830px;
+}
+
+.img-list .img-list-item {
+    width: 150px;
+    height: 150px;
+}
+
+.img-list .img-list-item+.img-list-item {
+    margin-left: 20px;
+}
+
+.img-list .img-list-item img {
+    width: 100%;
+    height: 100%;
+}

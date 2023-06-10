@@ -2,12 +2,12 @@
 import './style.css';
 import titleImg from '../../assets/title-pic.png';
 
-import DemoPie from '../Chart/pieChart';
 import DemoColumn from '../Chart/columnChart';
 import DemoGauge from '../Chart/finishedChart';
 import SmallSwitchTabAndPie from '../SmallSwitchTab';
 import refresh from '../../assets/refresh.png';
 import SmallSwitchTabAndtb from '../smallSwitchTabAndTable';
+import weatherPic from '../../assets/weather.png';
 // title: 名称
 // content: 是否有解释内容
 // arrFirstRow: 数组 每三个一组 => 属性有title/num/symbol(非必有)
@@ -30,14 +30,15 @@ const ContentBox = ({
     picText,
     pieChart,
     finished,
-    top,
-    left,
-    right,
-    SmallSwitchTab
+    SmallSwitchTab,
+    weather,
+    iconAndTextFirstColumn,
+    iconAndTextSecondColumn,
+    fengxian,
 }) => {
     return (
         <div
-            className="box-container" style={{ width: SmallSwitchTab ? '408px' : '316px' }}>
+            className="box-container" style={{ width: SmallSwitchTab ? '408px' : title === '设备总量' ? '370px' : title === '主要示范区' ? '408px' : '316px' }}>
             <div className="box-title">
                 <img src={titleImg} />
                 {title}
@@ -97,7 +98,7 @@ const ContentBox = ({
             {picText && (<div className='picText-content'>
                 {picText.map((item, index) =>
                 (<div className="pic-text" key={index}>
-                    <img src={item.pic} />
+                    <img src={item.pic} style={{ width: title === '主要示范区' ? '306px' : '200px' }} />
                     <div>{item.title}</div>
                 </div>))}
             </div>)}
@@ -226,6 +227,100 @@ const ContentBox = ({
                 </div>
 
             )}
+            {/* 功能检测系统的图片+文字 */}
+            {iconAndTextFirstColumn && (
+                <div
+                    className='iconText-display'>
+                    <div className='single-column'>
+                        {iconAndTextFirstColumn.map((item, index) => (
+
+                            <div className='single-content' style={{ backgroundColor: index === 0 ? 'rgba(37, 121, 133, 1)' : 'rgba(31, 75, 85, 1)' }}>
+                                <div className="icon-display">ads</div>
+                                <div className="text-display">{item.title}</div>
+                            </div>))}
+
+                    </div>
+                    <div className='single-column'>
+                        {iconAndTextSecondColumn.map((item, index) => (
+
+                            <div className='single-content'>
+                                <div className="icon-display">ads</div>
+                                <div className="text-display">{item.title}</div>
+
+                            </div>))}
+
+                    </div>
+                </div>)}
+            {/* 天气预报 */}
+            {weather && (
+                <div >
+                    <div className='weather-display'>
+                        <div className='weather-left'>
+                            <div className='weather-tempre'>27度</div>
+                            <div className='wind-direct'>
+                                <div style={{ color: '#9ebbcb' }}>风向</div>
+                                <div>北风</div>
+                            </div>
+                            <div className='wind-direct'>
+                                <div style={{ color: '#9ebbcb' }}>降雨</div>
+                                <div>无降雨</div>
+                            </div>
+
+                        </div>
+                        <div >
+                            <img className='weather-pic' src={weatherPic} />
+                        </div>
+
+                    </div>
+                    <div className='weather-date'>
+                        <div className='single-date'>
+                            <div>周一</div>
+                            <div>28°</div>
+                            <div>123</div>
+
+                        </div>
+                        <div className='single-date'>
+                            <div>周二</div>
+                            <div>28°</div>
+                            <div>123</div>
+
+                        </div>
+                        <div className='single-date'>
+                            <div>周三</div>
+                            <div>28°</div>
+                            <div>123</div>
+
+                        </div>
+                        <div className='single-date'>
+                            <div>周四</div>
+                            <div>28°</div>
+                            <div>123</div>
+
+                        </div>  <div className='single-date'>
+                            <div>周五</div>
+                            <div>28°</div>
+                            <div>123</div>
+
+                        </div>
+                        <div className='single-date'>
+                            <div>周六</div>
+                            <div>28°</div>
+                            <div>123</div>
+
+                        </div>
+                        <div className='single-date'>
+                            <div>周日</div>
+                            <div>28°</div>
+                            <div>123</div>
+
+                        </div>
+                    </div>
+                </div>
+            )}
+
+
+
+
             {selectFirst && (
                 <div className='select-display'>
                     <div className='select-group'>
@@ -273,12 +368,12 @@ const ContentBox = ({
 
             )}
             {tableListName && (
-                <div className="table-list">
+                <div className="table-list" style={{ padding: SmallSwitchTab ? '8px 0px' : '8px 16px' }}>
                     <div className='table-title'>
                         {tableListName.map((item, index) => (
                             <div key={index} className='list-name'>{item}</div>))}
                     </div>
-                    <div className='table-height' style={{ height: SmallSwitchTab ? '324px' : '514px' }}>
+                    <div className='table-height' style={{ height: SmallSwitchTab ? '324px' : fengxian ? '276px' : title === '设备总量' ? '200px' : '514px' }}>
                         {tableList && tableList.map((item, index) => (
                             <div className="table-info">
                                 <div key={index} className='table-list-info'>{item.fistColumn}</div>

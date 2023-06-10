@@ -32,9 +32,7 @@ const FaultPage = () => {
                     infoThirdTab={[{ title: '紫外线', count: '1级' }, { title: '空气质量', count: '56%' }]}
                 />
                 <ContentBox title={'气象监测'}
-                    verticalInfo={[{ title: '温度', count: '30°C' }, { title: '湿度', count: '56%' }, {
-                        title: 'PM2.5', count: '80'
-                    }, { title: 'PM10', count: '120' }]}
+
                 />
             </div>
 

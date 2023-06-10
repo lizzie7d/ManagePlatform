@@ -1,28 +1,30 @@
 import "./App.less";
-import React from "react";
+import React, { useEffect } from "react";
 
 import { ConfigProvider } from "antd";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
 import Login from "./pages/login";
-import { connect } from "react-redux";
 import Layout from "./component/Layout";
 import SystemPage from "./pages/SystemPage";
 import Overview from "./pages/OverviewPage";
 import PlantInfo from "./pages/PlantInfo/plantInfo";
 import FaultPage from "./pages/FaultPage";
 import Yunwei from "./pages/yunwei";
-
-// import { connect } from "react-redux";
+import EnterPage from "./pages/EnterPage";
 
 const App = () => {
+  useEffect(() => {
+    console.log(localStorage.getItem('login'));
+  })
   return (
     <BrowserRouter>
       <ConfigProvider>
         <Layout />
         {/* <Login /> */}
         <Routes>
-          <Route exact path="/" element={<Login />} />
+
+          <Route exact path="/" element={<EnterPage />} />
+          <Route exact path="login" element={<Login />} />
           <Route path="moniringSystem" element={<SystemPage />} />
           <Route path="overview" element={<Overview />} />
           <Route path="plantInfo" element={<PlantInfo />} />

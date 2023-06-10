@@ -1,7 +1,7 @@
 import ContentBox from '../../component/ContentBox';
 import SwitchTab from '../../component/SwitchTab';
 import './style.css';
-import systemPic from '../../assets/systempic.jpg';
+import systemPic1 from '../../assets/systemPic1.jpg';
 import MiddleBox from '../../component/MiddleBox';
 import { Content } from 'antd/es/layout/layout';
 const SystemPage = () => {
@@ -10,47 +10,64 @@ const SystemPage = () => {
 
     return (
         <div className=''>
-            <div className="content-middle">
-                <MiddleBox />
-            </div>
+
+            <SwitchTab title={["涂市镇", "李溪镇", "铜鼓镇", "南腰界镇", '花田乡']} />
             <div className="system-container">
                 <div className="content-left">
                     <ContentBox
-                        title={'现场环境信息'}
-                        verticalInfo={[{ title: '温度', count: '30°C' }, { title: '湿度', count: '56%' }, {
-                            title: 'PM2.5', count: '80'
-                        }, { title: 'PM10', count: '120' }]}
-                        infoFirstTab={[{ title: '空气质量', count: "优" }, { title: '空气质量', count: '50DB' }]}
-                        infoSecondTab={[{ title: '风向', count: '东南' }, { title: '空气质量', count: '1.5m/s' }]}
-                        infoThirdTab={[{ title: '紫外线', count: '1级' }, { title: '空气质量', count: '56%' }]}
-                    />
-                    <ContentBox title={'维护人员信息'}
-                        verticalInfo={[{ title: '温度', count: '30°C' }, { title: '湿度', count: '56%' }, {
-                            title: 'PM2.5', count: '80'
-                        }, { title: 'PM10', count: '120' }]}
-                    />
-                    <ContentBox
-                        // pic={overViewPic1}
-                        lineChart={true}
-                        title={"苗木库 "}
 
+                        title={'设备总量'}
+                        infoFirstTab={[{ title: '设备数量', count: "80" }, { title: '运行状态', count: '正常' }]}
+                        infoSecondTab={[{ title: '设备类型', count: '1' }]}
+                        selectFirst={[{ title: '设备状态', options: ['开启', '关闭'] }, { title: '控制类型', options: ['自动', '手动'] }]}
+                        selectSecond={[{ title: '运行状态', options: ["正常", "故障", '维修'] }]}
+                        tableListName={["设备编号", "运行状态", '设备开关', '位置']}
+                        fengxian={1}
+                        tableList={[
+                            { fistColumn: 'VTSS001', secondColumn: '正常', thirdColumn: '开启', fourthColumn: '定位' },
+                            { fistColumn: 'VTSS001', secondColumn: '正常', thirdColumn: '开启', fourthColumn: '定位' },
+                            { fistColumn: 'VTSS001', secondColumn: '正常', thirdColumn: '开启', fourthColumn: '定位' },
+                            { fistColumn: 'VTSS001', secondColumn: '正常', thirdColumn: '开启', fourthColumn: '定位' },
+                            { fistColumn: 'VTSS001', secondColumn: '正常', thirdColumn: '开启', fourthColumn: '定位' },
+                            { fistColumn: 'VTSS001', secondColumn: '正常', thirdColumn: '开启', fourthColumn: '定位' },
+                            { fistColumn: 'VTSS001', secondColumn: '正常', thirdColumn: '开启', fourthColumn: '定位' },
+                            { fistColumn: 'VTSS001', secondColumn: '正常', thirdColumn: '开启', fourthColumn: '定位' },
+                            { fistColumn: 'VTSS001', secondColumn: '正常', thirdColumn: '开启', fourthColumn: '定位' },
+                            { fistColumn: 'VTSS001', secondColumn: '正常', thirdColumn: '开启', fourthColumn: '定位' },
+
+
+                        ]
+
+                        }
                     />
                 </div>
                 <div className="content-right">
                     <ContentBox
-                        title='苗木维护时间'
-                        infoFirstTab={[{ title: '', count: '区域A' }, { title: '', count: '区域B' }, { title: '', count: '区域C' }]}
-                    // infoSecondTab={[{ title: '', count: '区域C' }]}
+                        title='功能监测系统'
+                        iconAndTextFirstColumn={[{ title: '摄像监测', icon: 'ads' }, { title: '苗情监测', icon: 'ads' }]}
+                        iconAndTextSecondColumn={[{ title: '土壤监测', icon: 'ads' }, { title: '水质监测', icon: 'ads' }]}
                     />
                     <ContentBox
-                        title='实景监测框及导航'
-                        pic={systemPic}
+                        title='实景融合点位'
+                        pic={systemPic1}
                     />
                     <ContentBox
-                        title='苗木维护完成度'
+                        title='风险预警提示'
+                        tableListName={["事件", "设备标号", '负责人电话', '状态']}
+                        fengxian={1}
+                        tableList={[
+                            { fistColumn: '时间', secondColumn: 'ASDCSD', thirdColumn: '184545478752', fourthColumn: '已处理' },
+                            { fistColumn: '时间', secondColumn: 'ASDCSD', thirdColumn: '184545478752', fourthColumn: '已处理' },
+                            { fistColumn: '时间', secondColumn: 'ASDCSD', thirdColumn: '184545478752', fourthColumn: '已处理' }, { fistColumn: '时间', secondColumn: 'ASDCSD', thirdColumn: '184545478752', fourthColumn: '已处理' }, { fistColumn: '时间', secondColumn: 'ASDCSD', thirdColumn: '184545478752', fourthColumn: '已处理' }, { fistColumn: '时间', secondColumn: 'ASDCSD', thirdColumn: '184545478752', fourthColumn: '已处理' },
+                            { fistColumn: '时间', secondColumn: 'ASDCSD', thirdColumn: '184545478752', fourthColumn: '已处理' }, { fistColumn: '时间', secondColumn: 'ASDCSD', thirdColumn: '184545478752', fourthColumn: '已处理' }, { fistColumn: '时间', secondColumn: 'ASDCSD', thirdColumn: '184545478752', fourthColumn: '已处理' }, { fistColumn: '时间', secondColumn: 'ASDCSD', thirdColumn: '184545478752', fourthColumn: '已处理' },
 
-                        finished={true}
+                            { fistColumn: '时间', secondColumn: 'ASDCSD', thirdColumn: '184545478752', fourthColumn: '已处理' }, { fistColumn: '时间', secondColumn: 'ASDCSD', thirdColumn: '184545478752', fourthColumn: '已处理' }, { fistColumn: '时间', secondColumn: 'ASDCSD', thirdColumn: '184545478752', fourthColumn: '已处理' }, { fistColumn: '时间', secondColumn: 'ASDCSD', thirdColumn: '184545478752', fourthColumn: '已处理' },
+
+                        ]
+
+                        }
                     />
+
                 </div>
             </div>
 
