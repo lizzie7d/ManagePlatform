@@ -8,10 +8,10 @@ import './style.css'
 import MultipleItems from "../../component/Carousel";
 import { Alert } from "antd";
 // 稻场概况
-const Overview = () => {
+const CompanyManage = () => {
 
     return (
-        <div className="overView-container">
+        <div className="CompanyManage-container">
             <Alert
                 banner
                 message={
@@ -67,4 +67,4 @@ const Overview = () => {
         </div>
     )
 };
-export default Overview;
+export default CompanyManage;

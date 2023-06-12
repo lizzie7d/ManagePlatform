@@ -8,7 +8,7 @@ import Login from "./pages/login";
 import { connect } from "react-redux";
 import Layout from "./component/Layout";
 import SystemPage from "./pages/SystemPage";
-import Overview from "./pages/OverviewPage";
+import CompanyManage from "./pages/CompanyManagePage";
 import PlantInfo from "./pages/PlantInfo/plantInfo";
 
 // import { connect } from "react-redux";
@@ -22,7 +22,7 @@ const App = () => {
           {/* <Route exact path="/" element={<Login />} /> */}
           {/* <Route exact path="/login" element={<Login />} /> */}
           <Route path="moniringSystem" element={<SystemPage />} />
-          <Route path="overview" element={<Overview />} />
+          <Route path="CompanyManage" element={<CompanyManage />} />
           <Route path="plantInfo" element={<PlantInfo />} />
 
           {/* <Route path="/console/home/*" element={<Home/>} />*/}

@@ -1,10 +1,10 @@
 import ContentBox from "../../component/ContentBox";
-import overViewPic1 from '../../assets/overviewPic1.png';
-import overViewPic2 from '../../assets/overviewPic2.png';
+import CompanyManagePic1 from '../../assets/CompanyManagePic1.png';
+import CompanyManagePic2 from '../../assets/CompanyManagePic2.png';
 
 import './style.css'
 // 稻场概况
-const Overview = () => {
+const CompanyManage = () => {
     const data =
         [
             {
@@ -4134,10 +4134,10 @@ const Overview = () => {
             }
         ]
     return (
-        <div className="overView-container">
+        <div className="CompanyManage-container">
             <div className="content-left">
                 <ContentBox
-                    pic={overViewPic1}
+                    pic={CompanyManagePic1}
                     title={"基础信息"}
                     content={'酉阳土家族苗族自治县是重庆市辖县位于市境东南部,历史文化悠久,有2200多年建县史,曾是800年州府所在地,拥有国家级历史文化名镇龙潭古镇和重庆市历史文化名镇龚滩古镇、酉水河镇。'}
                     verticalInfo={[{ title: '种植面积', count: '5400亩' }, { title: '种植作物', count: '水稻' }, {
@@ -4145,7 +4145,7 @@ const Overview = () => {
                     }]}
                 />
                 <ContentBox
-                    // pic={overViewPic1}
+                    // pic={CompanyManagePic1}
                     lineChart={data}
                     title={"土壤墒情概况"}
 
@@ -4163,7 +4163,7 @@ const Overview = () => {
                     infoThirdTab={[{ title: '紫外线', count: '1级' }, { title: '空气质量', count: '56%' }]}
                 />
                 <ContentBox
-                    picText={[{ title: '花田乡', pic: overViewPic2 }, { title: '南腰界镇', pic: overViewPic2 }, { title: '涂市镇', pic: overViewPic2 }, { title: '李溪镇', pic: overViewPic2 }, { title: '铜鼓镇', pic: overViewPic2 }]}
+                    picText={[{ title: '花田乡', pic: CompanyManagePic2 }, { title: '南腰界镇', pic: CompanyManagePic2 }, { title: '涂市镇', pic: CompanyManagePic2 }, { title: '李溪镇', pic: CompanyManagePic2 }, { title: '铜鼓镇', pic: CompanyManagePic2 }]}
 
                     title={'水稻种植'}
 
@@ -4173,4 +4173,4 @@ const Overview = () => {
         </div>
     )
 };
-export default Overview;
+export default CompanyManage;

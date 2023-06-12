@@ -1,7 +1,7 @@
 import ContentBox from "../../component/ContentBox";
 
 // 稻场概况
-const Overview = () => {
+const CompanyManage = () => {
     return (
         <div>
             <ContentBox
@@ -11,4 +11,4 @@ const Overview = () => {
         </div>
     )
 };
-export default Overview;
+export default CompanyManage;

@@ -1,7 +1,7 @@
 import ContentBox from "../../component/ContentBox";
-import overViewPic1 from '../../assets/overviewPic1.png'
+import CompanyManagePic1 from '../../assets/CompanyManagePic1.png'
 // 稻场概况
-const Overview = () => {
+const CompanyManage = () => {
     return (
         <div>
             <ContentBox
@@ -15,4 +15,4 @@ const Overview = () => {
         </div>
     )
 };
-export default Overview;
+export default CompanyManage;

@@ -1,6 +1,18 @@
-.company-container {
+.overview-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 16px;
+}
+
+.content-right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.content-left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }

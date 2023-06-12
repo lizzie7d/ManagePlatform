@@ -1,10 +1,10 @@
-.overView-container{
+.CompanyManage-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.content-right{
+.content-right {
     display: flex;
     flex-direction: column;
 }

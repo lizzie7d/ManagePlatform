@@ -10,6 +10,19 @@ import MiddleBox from '../../component/MiddleBox';
 
 
 const FaultPage = () => {
+    // 这里请求成功以后
+    // 数据展示
+    // JSON = {
+    //     title:'项目介绍',
+    //     content:'szdddsad'
+    // }
+
+    // 首先我们要设置useState
+    // const [tableInfo, setTableInfo]=useState({});
+    // 拿到数据以后
+    // setTableInfo(JSON);
+
+
     return (
         <div>
             <div className="content-middle">
@@ -21,7 +34,7 @@ const FaultPage = () => {
                         top={'80px'}
                         left={'32px'}
                         pic={systemPic}
-                        title={'项目介绍'}
+                        title={'项目介绍'}  //title这里写成 title={tableInfo.title}
                         content={
                             ` “酉阳贡米”有着悠久的历史，稻米脆酥油糯，滑而不腻，粒细体长、形状似梭、质白如玉、米色透明、香味回绕，自宋朝开始被朝廷定位“贡米”。而位于武陵山腹地的酉阳，水稻常年种植面积保持在26万亩左右。这里平均海拔800米，山地立体气候明显，四季分明、昼夜温差大，雨量充沛、无霜期长、日照充足，为打造绿色、有机水稻产业提供了优越的先决条件。`
                         } />

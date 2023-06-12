@@ -1,17 +1,17 @@
-.overView-container{
+.CompanyManage-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 16px;
 }
 
-.content-right{
+.content-right {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.content-left{
+.content-left {
     display: flex;
     flex-direction: column;
     gap: 16px;

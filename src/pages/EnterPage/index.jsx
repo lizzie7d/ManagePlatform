@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './style.css';
+import enterIcon from '../../assets/rectangle_49_u4.svg'
 const EnterPage = () => {
     return (
         <div className='enter-container'>
@@ -11,6 +12,7 @@ const EnterPage = () => {
                 <Link className="enter-btn" to={'login'}>进入系统</Link>
 
             </div>
+
         </div>
     )
 }

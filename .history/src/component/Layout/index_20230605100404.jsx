@@ -10,7 +10,7 @@ const Layout = () => {
                             <Link to={"faultPage"}> 123 </Link>
                         </div>
                         <div className="left-title">
-                            <Link to={"overview"}>稻场概况</Link>
+                            <Link to={"CompanyManage"}>稻场概况</Link>
                             <Link to={"moniringSystem"}>监测系统</Link>
 
                         </div>

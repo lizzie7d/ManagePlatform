@@ -209,7 +209,7 @@ const ContentBox = ({
                 </div>)}
 
             {infoFirstTab && (
-                <div style={{ height: infoSecondTab ? 'auto' : 100 }}>
+                <div style={{ height: infoThirdTab ? '150px' : '100px' }}>
                     <div className='info-tab'>
                         {infoFirstTab.map((item, index) => (
                             <div key={index}
@@ -239,7 +239,7 @@ const ContentBox = ({
 
                             </div>))}
                     </div>
-                    <div className='info-tab' style={{ display: infoThirdTab ? 'block' : 'none' }}>
+                    <div className='info-tab' style={{ display: infoThirdTab ? 'auto' : 'none' }}>
                         {infoThirdTab && infoThirdTab.map((item, index) => (
                             <div key={index}
                                 className='single-info'>

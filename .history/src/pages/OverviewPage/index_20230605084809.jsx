@@ -1,8 +1,8 @@
 import ContentBox from "../../component/ContentBox";
-import overViewPic1 from '../../assets/overviewPic1.png'
+import CompanyManagePic1 from '../../assets/CompanyManagePic1.png'
 import DemoLine from "../../component/Chart/lineChart";
 // 稻场概况
-const Overview = () => {
+const CompanyManage = () => {
     const data =
         [
             {
@@ -4134,7 +4134,7 @@ const Overview = () => {
     return (
         <div>
             <ContentBox
-                pic={overViewPic1}
+                pic={CompanyManagePic1}
                 position={0}
                 title={"基础信息"}
                 content={'酉阳土家族苗族自治县是重庆市辖县位于市境东南部,历史文化悠久,有2200多年建县史,曾是800年州府所在地,拥有国家级历史文化名镇龙潭古镇和重庆市历史文化名镇龚滩古镇、酉水河镇。'}
@@ -4156,4 +4156,4 @@ const Overview = () => {
         </div>
     )
 };
-export default Overview;
+export default CompanyManage;

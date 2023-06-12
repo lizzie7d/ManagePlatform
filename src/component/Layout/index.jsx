@@ -58,7 +58,7 @@ const Layout = () => {
                                 style={{ backgroundImage: tabIndex === 2 ? `url(${infoSelected})` : `url(${info})` }}
 
                             ></Link>
-                            <Link to={"overview"}
+                            <Link to={"companyManage"}
                                 onClick={() => setTabIndex(3)}
                                 style={{ backgroundImage: tabIndex === 3 ? `url(${companyManageSelected})` : `url(${companyManage})` }}
 

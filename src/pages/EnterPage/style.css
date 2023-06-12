@@ -32,6 +32,8 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    background-image: url(../../assets/rectangle_49_u4.svg);
+    background-size: 100% 100%;
 }
 
 .enter-title {
@@ -44,5 +46,4 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-shadow: 0px 0px 10px #27719B;
 }
