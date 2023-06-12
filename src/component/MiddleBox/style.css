@@ -1,5 +1,5 @@
 .middle-container {
-    padding: 16px;
+    padding: 16px 0px;
     height: 158px;
     background: linear-gradient(180deg, #0b323a 0%, rgba(11, 52, 69, 0.7) 100%);
     box-shadow: 0px 0px 16px rgba(14, 39, 47, 0.6);
@@ -20,7 +20,7 @@
     display: flex;
     position: absolute;
     justify-content: center;
-    top: 738px;
+    top: 774px;
 
 }
 
@@ -79,7 +79,7 @@
     font-size: 24px;
     font-weight: bold;
     display: inline-block;
-
+    color: #fff;
 }
 
 .produce-symbol {

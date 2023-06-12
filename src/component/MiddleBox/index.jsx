@@ -2,21 +2,29 @@ import './style.css';
 import defaultPic from '../../assets/defaultPic1.png';
 import chanliang from '../../assets/chanliang.png';
 import chanzhi from '../../assets/chanzhi.png';
+import { useState } from 'react';
 
 const MiddleBox = () => {
-    const titleFirstColumn = ['涂市镇钟岭村01', '涂市镇大杉村01', '铜鼓镇清泉村01', '李溪镇毛家山村01'];
-    const titleSecondColumn = ['涂市镇钟岭村02', '涂市镇钟岭村02', '涂市镇钟岭村02', '涂市镇钟岭村02'];
-
+    const [index, setIndex] = useState(0);
     return (
         <div className='middle-flex'>
             <div
                 className="middle-container"
             >
                 <div className="icon-and-text">
-                    {titleFirstColumn.map((item, index) => (<div className='single-detail'>{item}</div>))}
+                    <div className='single-detail' onClick={() => setIndex(0)} style={{ backgroundColor: index === 0 ? 'rgba(37, 121, 133, 1)' : 'rgba(31, 75, 85, 1)' }}>涂市镇钟岭村01</div>
+                    <div className='single-detail' onClick={() => setIndex(1)} style={{ backgroundColor: index === 1 ? 'rgba(37, 121, 133, 1)' : 'rgba(31, 75, 85, 1)' }}>涂市镇大杉村01</div>
+                    <div className='single-detail' onClick={() => setIndex(2)} style={{ backgroundColor: index === 2 ? 'rgba(37, 121, 133, 1)' : 'rgba(31, 75, 85, 1)' }}>铜鼓镇清泉村01</div>
+                    <div className='single-detail' onClick={() => setIndex(3)} style={{ backgroundColor: index === 3 ? 'rgba(37, 121, 133, 1)' : 'rgba(31, 75, 85, 1)' }} >李溪镇毛家山村01</div>
+
                 </div>
                 <div className="icon-and-text">
-                    {titleSecondColumn.map((item, index) => (<div className='single-detail'>{item}</div>))}
+                    <div className='single-detail' onClick={() => setIndex(4)} style={{ backgroundColor: index === 4 ? 'rgba(37, 121, 133, 1)' : 'rgba(31, 75, 85, 1)' }}>涂市镇钟岭村02</div>
+                    <div className='single-detail' onClick={() => setIndex(5)} style={{ backgroundColor: index === 5 ? 'rgba(37, 121, 133, 1)' : 'rgba(31, 75, 85, 1)' }} >涂市镇大杉村02</div>
+                    <div className='single-detail' onClick={() => setIndex(6)} style={{ backgroundColor: index === 6 ? 'rgba(37, 121, 133, 1)' : 'rgba(31, 75, 85, 1)' }}>铜鼓镇清泉村02</div>
+                    <div className='single-detail' onClick={() => setIndex(7)} style={{ backgroundColor: index === 7 ? 'rgba(37, 121, 133, 1)' : 'rgba(31, 75, 85, 1)' }}>南腰界镇01</div>
+
+
                 </div>
                 <div className="middle-pic">
                     <img src={defaultPic} style={{ width: 202 }} />

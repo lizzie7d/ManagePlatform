@@ -8,6 +8,8 @@ import SmallSwitchTabAndPie from '../SmallSwitchTab';
 import refresh from '../../assets/refresh.png';
 import SmallSwitchTabAndtb from '../smallSwitchTabAndTable';
 import weatherPic from '../../assets/weather.png';
+import { useState } from 'react';
+import news1 from '../../assets/news/news1.jpg';
 // title: 名称
 // content: 是否有解释内容
 // arrFirstRow: 数组 每三个一组 => 属性有title/num/symbol(非必有)
@@ -35,10 +37,16 @@ const ContentBox = ({
     iconAndTextFirstColumn,
     iconAndTextSecondColumn,
     fengxian,
+    iconAndTextThirdColumn,
+    news,
 }) => {
+    const [optionChange, setOptionChange] = useState([]);
+    const setSelectedOption = (e) => {
+        console.log(e.target.value);
+    }
     return (
         <div
-            className="box-container" style={{ width: SmallSwitchTab ? '408px' : title === '设备总量' ? '370px' : title === '主要示范区' ? '408px' : '316px' }}>
+            className="box-container" style={{ width: SmallSwitchTab ? '408px' : title === '设备总量' ? '370px' : title === '主要示范区' || '合作单位' ? '408px' : '316px' }}>
             <div className="box-title">
                 <img src={titleImg} />
                 {title}
@@ -48,7 +56,7 @@ const ContentBox = ({
                     <div className='vertical-info'>
                         {verticalInfo.map((item, index) => (
                             <div className="eachInfo" key={index}>
-                                <div className='vertical-count'>{item.count}</div>
+                                <div className='vertical-count'>{item.count}{item.symbol && (<span className='symbol'>{item.symbol}</span>)}</div>
 
                                 <div className='link-bottom'></div>
                                 <div>{item.title}</div>
@@ -56,6 +64,27 @@ const ContentBox = ({
 
                     </div>
 
+                </div>
+            )}
+
+            {news && (
+                <div>
+                    {news.map((item, index) => (<div className='news-contain' key={index}>
+                        <img className="news-pic" src={`${item.img}`}>
+
+                        </img>
+                        <div className="news-content">
+                            <div className="news-titleAndTime">
+                                <div className='new-title'>{item.title}</div>
+                                <div className='new-time'>{item.time}</div>
+
+                            </div>
+                            <div>{item.content}</div>
+                        </div>
+                    </div>))}
+                    <div>
+
+                    </div>
                 </div>
             )}
             {verticalSecondInfo && (
@@ -210,7 +239,7 @@ const ContentBox = ({
 
                             </div>))}
                     </div>
-                    <div className='info-tab'>
+                    <div className='info-tab' style={{ display: infoThirdTab ? 'block' : 'none' }}>
                         {infoThirdTab && infoThirdTab.map((item, index) => (
                             <div key={index}
                                 className='single-info'>
@@ -235,7 +264,7 @@ const ContentBox = ({
                         {iconAndTextFirstColumn.map((item, index) => (
 
                             <div className='single-content' style={{ backgroundColor: index === 0 ? 'rgba(37, 121, 133, 1)' : 'rgba(31, 75, 85, 1)' }}>
-                                <div className="icon-display">ads</div>
+                                <img className="icon-display" src={`${item.icon}`}></img>
                                 <div className="text-display">{item.title}</div>
                             </div>))}
 
@@ -244,7 +273,19 @@ const ContentBox = ({
                         {iconAndTextSecondColumn.map((item, index) => (
 
                             <div className='single-content'>
-                                <div className="icon-display">ads</div>
+                                <img className="icon-display" src={`${item.icon}`}></img>
+
+                                <div className="text-display">{item.title}</div>
+
+                            </div>))}
+
+                    </div>
+                    <div className='single-column'>
+                        {iconAndTextThirdColumn.map((item, index) => (
+
+                            <div className='single-content'>
+                                <img className="icon-display" src={`${item.icon}`}></img>
+
                                 <div className="text-display">{item.title}</div>
 
                             </div>))}
@@ -256,7 +297,7 @@ const ContentBox = ({
                 <div >
                     <div className='weather-display'>
                         <div className='weather-left'>
-                            <div className='weather-tempre'>27度</div>
+                            <div className='weather-tempre'>27°C</div>
                             <div className='wind-direct'>
                                 <div style={{ color: '#9ebbcb' }}>风向</div>
                                 <div>北风</div>
@@ -343,11 +384,11 @@ const ContentBox = ({
                             <div className="select-part" key={index}>
                                 <span className="select-title">{item.title}</span>
                                 <select className='select-content' name={item.options[0]}
-                                    // onChange={setSelectedOption}
+                                    onChange={(e) => setSelectedOption(e)}
                                     options={item.options}
                                 >
                                     {item.options.map((subItem, subIndex) => (<option
-                                        value={item.options}
+                                        value={subItem}
                                     >{subItem}</option>))}
                                 </select>
                             </div>
@@ -375,23 +416,20 @@ const ContentBox = ({
                     </div>
                     <div className='table-height' style={{ height: SmallSwitchTab ? '324px' : fengxian ? '276px' : title === '设备总量' ? '200px' : '514px' }}>
                         {tableList && tableList.map((item, index) => (
-                            <div className="table-info">
-                                <div key={index} className='table-list-info'>{item.fistColumn}</div>
-                                <div key={index} className='table-list-info'>{item.secondColumn}</div>
-                                <div key={index} className='table-list-info'>{item.thirdColumn}</div>
-                                <div key={index} className='table-list-info'>{item.fourthColumn}</div>
-                                {item.fifthColumn && (<div key={index} className='table-list-info'>{item.fifthColumn}</div>)}
+                            <div className="table-info" key={index} style={{ background: index % 2 !== 0 ? 'linear-gradient(269.9999988481437deg, rgba(31, 75, 85, 1) -0%, rgba(18, 67, 78, 1) 100%)' : 'none' }} >
+                                <div className='table-list-info'>{item.fistColumn}</div>
+                                <div className='table-list-info'>{item.secondColumn}</div>
+                                <div className='table-list-info'>{item.thirdColumn}</div>
+                                <div className='table-list-info' style={{ background: item.fourthColumn === '定位' ? 'linear-gradient(269.99999978929463deg, rgba(40, 135, 129, 1) -0%, rgba(32, 154, 181, 1) 100%)' : 'none', padding: item.fourthColumn === '定位' ? '4px' : '0px' }}>{item.fourthColumn}</div>
+                                {item.fifthColumn && (<div className='table-list-info'>{item.fifthColumn}</div>)}
                             </div>
-                            // <div className='table-info'>
-
-
-                            // </div>
                         ))}
                     </div>
                 </div>
-            )}
+            )
+            }
 
-        </div>
+        </div >
     )
 };
 export default ContentBox;

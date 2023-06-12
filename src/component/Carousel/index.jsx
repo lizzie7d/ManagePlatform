@@ -5,7 +5,6 @@ import company4 from '../../assets/carousel/company4.jpg';
 import './style.css';
 import React, { Component } from "react";
 import Slider from "react-slick";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -24,25 +23,26 @@ export default class MultipleItems extends Component {
             <div>
                 <Slider {...settings}>
                     <div>
-                        <img src={company1} alt="" width="300" height="170" />
+                        <img src={company1} alt="" width="100" height="100" />
                     </div>
                     <div>
-                        <img src={company1} alt="" width="300" height="170" />
+                        <img src={company1} alt="" width="100" height="100" />
+
                     </div>
                     <div>
-                        <img src={company1} alt="" width="300" height="170" />
+                        <img src={company1} alt="" width="100" height="100" />
                     </div>
                     <div>
-                        <img src={company1} alt="" width="300" height="170" />
+                        <img src={company1} alt="" width="100" height="100" />
                     </div>
                     <div>
-                        <img src={company1} alt="" width="300" height="170" />
+                        <img src={company1} alt="" width="100" height="100" />
                     </div>
                     <div>
-                        <img src={company1} alt="" width="300" height="170" />
+                        <img src={company1} alt="" width="100" height="100" />
                     </div>
                     <div>
-                        <img src={company1} alt="" width="300" height="170" />
+                        <img src={company1} alt="" width="100" height="100" />
                     </div>
 
 

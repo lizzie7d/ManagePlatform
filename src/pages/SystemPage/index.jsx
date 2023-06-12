@@ -4,6 +4,12 @@ import './style.css';
 import systemPic1 from '../../assets/systemPic1.jpg';
 import MiddleBox from '../../component/MiddleBox';
 import { Content } from 'antd/es/layout/layout';
+import turang from '../../assets/monitor/turang.png';
+import bug from '../../assets/monitor/bug.png';
+import drip from '../../assets/monitor/drip.png';
+import first from '../../assets/monitor/first.png';
+import flower from '../../assets/monitor/flower.png';
+
 const SystemPage = () => {
 
     //监测系统页面
@@ -44,8 +50,10 @@ const SystemPage = () => {
                 <div className="content-right">
                     <ContentBox
                         title='功能监测系统'
-                        iconAndTextFirstColumn={[{ title: '摄像监测', icon: 'ads' }, { title: '苗情监测', icon: 'ads' }]}
-                        iconAndTextSecondColumn={[{ title: '土壤监测', icon: 'ads' }, { title: '水质监测', icon: 'ads' }]}
+                        iconAndTextFirstColumn={[{ title: '摄像监测', icon: first }, { title: '苗情监测', icon: flower }]}
+                        iconAndTextSecondColumn={[{ title: '土壤监测', icon: turang }, { title: '水质监测', icon: drip }]}
+                        iconAndTextThirdColumn={[{ title: '虫害监测', icon: bug }]}
+
                     />
                     <ContentBox
                         title='实景融合点位'

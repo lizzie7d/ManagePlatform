@@ -37,8 +37,8 @@ const FaultPage = () => {
                     <ContentBox title={'稻米数据'}
                         top={'80px'}
                         right={'32px'}
-                        verticalInfo={[{ title: '总种植面积', count: '5500亩' }, { title: '覆盖农户', count: '2125户' }, {
-                            title: '带动人均增收', count: '5000元'
+                        verticalInfo={[{ title: '总种植面积', count: '5500', symbol: '亩' }, { title: '覆盖农户', count: '2125', symbol: '户' }, {
+                            title: '带动人均增收', count: '5000', symbol: '元'
                         }]}
                         verticalSecondInfo={[{ title: '脱贫户', count: '150' }, { title: '集体经济组织', count: '7' }, {
                             title: '主要种植区', count: '5'
@@ -47,7 +47,7 @@ const FaultPage = () => {
                     <ContentBox title={'实施环境监测概况'}
                         top={'80px'}
                         right={'32px'}
-                        verticalInfo={[{ title: '温度', count: '30' }, { title: '温度', count: '56' }, {
+                        verticalInfo={[{ title: '温度', count: '30°C' }, { title: '湿度', count: '56%' }, {
                             title: 'PM2.5', count: '80'
                         }, {
                             title: 'PM10', count: '120'

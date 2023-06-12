@@ -17,12 +17,14 @@
 }
 
 .enter-box {
-    width: 554px;
-    height: 1500px;
+    width: 700px;
+    height: 1000px;
     overflow: hidden;
     justify-content: center;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    gap: 150px;
 }
 
 .enter-container {
@@ -30,4 +32,17 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+.enter-title {
+    font-family: 'DingTalk JinBuTi';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 65px;
+    text-align: center;
+    background: linear-gradient(180deg, #FFFFFF 0%, #85D4D9 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0px 0px 10px #27719B;
 }
