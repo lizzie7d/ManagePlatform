@@ -39,6 +39,7 @@ const ContentBox = ({
     fengxian,
     iconAndTextThirdColumn,
     news,
+    height
 }) => {
     const [optionChange, setOptionChange] = useState([]);
     const setSelectedOption = (e) => {
@@ -46,7 +47,7 @@ const ContentBox = ({
     }
     return (
         <div
-            className="box-container" style={{ width: SmallSwitchTab ? '408px' : title === '设备总量' ? '370px' : title === '主要示范区' || '合作单位' ? '408px' : '316px' }}>
+            className="box-container" style={{ width: SmallSwitchTab ? '408px' : title === '设备总量' ? '370px' : title === '主要示范区' || title === '合作单位' ? '408px' : title === '项目介绍' ? '360px' : '360px', height: height }}>
             <div className="box-title">
                 <img src={titleImg} />
                 {title}

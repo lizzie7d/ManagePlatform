@@ -31,8 +31,6 @@ const FaultPage = () => {
             <div className='system-container'>
                 <div className="content-left">
                     <ContentBox
-                        top={'80px'}
-                        left={'32px'}
                         pic={systemPic}
                         title={'项目介绍'}  //title这里写成 title={tableInfo.title}
                         content={
@@ -48,8 +46,7 @@ const FaultPage = () => {
 
                 <div className="content-right">
                     <ContentBox title={'稻米数据'}
-                        top={'80px'}
-                        right={'32px'}
+                        height={'256px'}
                         verticalInfo={[{ title: '总种植面积', count: '5500', symbol: '亩' }, { title: '覆盖农户', count: '2125', symbol: '户' }, {
                             title: '带动人均增收', count: '5000', symbol: '元'
                         }]}
@@ -58,8 +55,9 @@ const FaultPage = () => {
                         }]}
                     />
                     <ContentBox title={'实施环境监测概况'}
-                        top={'80px'}
-                        right={'32px'}
+
+                        height={'342px'}
+
                         verticalInfo={[{ title: '温度', count: '30°C' }, { title: '湿度', count: '56%' }, {
                             title: 'PM2.5', count: '80'
                         }, {
@@ -71,6 +69,7 @@ const FaultPage = () => {
                     />
                     <ContentBox title={'气象监测'}
                         weather={1}
+                        height={'309px'}
 
 
                     />
