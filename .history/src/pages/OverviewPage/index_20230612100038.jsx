@@ -15,7 +15,7 @@ const Overview = () => {
             <Alert
                 banner
                 message={
-                    <span>
+                    <span grad>
                         I can be a React component, multiple React components, or just some text.
                     </span>
                 }
